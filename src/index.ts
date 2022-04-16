@@ -1,12 +1,15 @@
-console.log('test')
+import cliSelect from 'cli-select'
+import chalk from 'chalk'
 
-const a = 4
+cliSelect({
+  values: ['Major', 'Minor', 'Patch'],
+  valueRenderer: (value, selected) => {
+    if (selected) {
+      return chalk.underline(value)
+    }
 
-console.log('aaaaaaaaaaaaaaaaaaa')
-
-const b = {
-  a: 2,
-  b: 1,
-
-  c: 34,
-}
+    return value
+  },
+}).then((selected) => {
+  console.log(selected)
+})
