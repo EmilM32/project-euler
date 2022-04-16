@@ -13,4 +13,11 @@ import chalk from 'chalk'
 console.log(chalk.bold.cyan('Problem 1'))
 console.log(chalk.bold.magenta('Multiples of 3 or 5'), '\n')
 
-console.log('result of 001')
+let i = 0
+let sum = 0
+while (i < 1000) {
+  if (!(i % 3) || !(i % 5)) sum += i
+  i++
+}
+
+console.log(chalk.blue(`Result of problem 1: ${sum}`))
