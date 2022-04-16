@@ -1,4 +1,5 @@
 import chalk from 'chalk'
+const { log } = console
 
 /**
  * Problem 2
@@ -11,8 +12,8 @@ import chalk from 'chalk'
  * @see {@link https://projecteuler.net/problem=2}
  */
 
-console.log(chalk.bold.cyan('Problem 2'))
-console.log(chalk.bold.magenta('Even Fibonacci numbers'), '\n')
+log(chalk.bold.cyan('Problem 2'))
+log(chalk.bold.magenta('Even Fibonacci numbers'), '\n')
 
 const generateFibonacci = (maxValue: number): number[] => {
   const result = [1, 2]
@@ -38,4 +39,4 @@ const evenSum = fibonacciNumbers.reduce(
   0,
 )
 
-console.log(chalk.blue(`Result of problem 2: ${evenSum}`))
+log(chalk.blue(`Result of problem 2: ${evenSum}`))
