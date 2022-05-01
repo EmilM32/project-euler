@@ -3,12 +3,13 @@ import chalk from 'chalk'
 import fs from 'fs'
 import path from 'path'
 import { fork } from 'child_process'
+import { logWelcome } from './utils/logs'
 
 const DIRECTORY_PATH = './src/euler/'
 
 const availableFiles: string[] = []
 
-console.log(chalk.green('Select project to run:'), '\n')
+logWelcome('Select project to run:')
 
 fs.readdir(DIRECTORY_PATH, (err, files) => {
   if (err) throw new Error(err.message)

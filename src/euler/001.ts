@@ -1,5 +1,4 @@
-import chalk from 'chalk'
-const { log } = console
+import { logTitle, logSubtitle, logResult } from '../utils/logs'
 
 /**
  * Problem 1
@@ -11,8 +10,8 @@ const { log } = console
  * @see {@link https://projecteuler.net/problem=1}
  */
 
-log(chalk.bold.cyan('Problem 1'))
-log(chalk.bold.magenta('Multiples of 3 or 5'), '\n')
+logTitle('Problem 1')
+logSubtitle('Multiples of 3 or 5')
 
 let i = 0
 let sum = 0
@@ -21,4 +20,4 @@ while (i < 1000) {
   i++
 }
 
-log(chalk.blue(`Result of problem 1: ${sum}`))
+logResult(`Result of problem 1: ${sum}`)

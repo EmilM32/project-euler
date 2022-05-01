@@ -1,5 +1,4 @@
-import chalk from 'chalk'
-const { log } = console
+import { logTitle, logSubtitle, logResult } from '../utils/logs'
 
 /**
  * Problem 3
@@ -11,8 +10,8 @@ const { log } = console
  * @see {@link https://projecteuler.net/problem=3}
  */
 
-log(chalk.bold.cyan('Problem 3'))
-log(chalk.bold.magenta('Largest prime factor'), '\n')
+logTitle('Problem 3')
+logSubtitle('Largest prime factor')
 
 const SEARCH_NUMBER = 600_851_475_143
 
@@ -43,4 +42,4 @@ const factorNumbers = getFactorNumbers(SEARCH_NUMBER)
 const primeFactors = getPrimeFactors(factorNumbers)
 const maxPrimeNumber = Math.max(...primeFactors)
 
-log(chalk.blue(`Result of problem 3: ${maxPrimeNumber}`))
+logResult(`Result of problem 3: ${maxPrimeNumber}`)
