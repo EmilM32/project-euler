@@ -35,8 +35,8 @@ const isPrime = (number: number): boolean => {
   return true
 }
 
-const getPrimeFactors = (primeNumbers: number[]): number[] =>
-  primeNumbers.filter((number) => isPrime(number))
+const getPrimeFactors = (numbers: number[]): number[] =>
+  numbers.filter((number) => isPrime(number))
 
 const factorNumbers = getFactorNumbers(SEARCH_NUMBER)
 const primeFactors = getPrimeFactors(factorNumbers)
