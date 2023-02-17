@@ -17,14 +17,16 @@ logSubtitle('Even Fibonacci numbers')
 const generateFibonacci = (maxValue: number): number[] => {
   const result = [1, 2]
 
-  while (result.at(-1) < maxValue) {
-    const nextFibonacciNumber = result.at(-1) + result.at(-2)
+  while (result.at(-1)! < maxValue) {
+    const nextFibonacciNumber = result.at(-1)! + result.at(-2)!
     if (nextFibonacciNumber < maxValue) {
       result.push(nextFibonacciNumber)
     } else {
       return result
     }
   }
+
+  return result
 }
 
 const fibonacciNumbers = generateFibonacci(4_000_000)

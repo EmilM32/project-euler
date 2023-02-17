@@ -17,6 +17,7 @@
     "es2021": true
   },
   "rules": {
-    "prettier/prettier": 2
+    "prettier/prettier": 2,
+    "@typescript-eslint/no-non-null-assertion": 0
   }
 }
